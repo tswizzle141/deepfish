@@ -12,7 +12,9 @@
 * In the loss function, we combine the LCFCN loss function and our Focal-Cross-Entropy loss function for weakly-supervised segmentation:
 $$L_{proposed\_loss} = L_{Focal-CE} + L_{LCFCN}$$
 with:
+$$L_{LCFCN}(S,T) = L_I(S,T) + L_P(S,T) + L_S(S,T) + L_P(S,T)$$
 $$L_{Focal-CE} = (1-L_{CE})^{\gamma}$$
 $\gamma>0$ is parameter; $L_{CE}$ is the conventional Cross-Entropy:
 $$L_{CE} = -tln(p) - (1-t)ln(1-p)$$
 ## Results
+We have trained all cases end-to-end by ourselves, with optimizer Nesterov-Adam, initial learning rate of 1e-5.
