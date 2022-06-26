@@ -10,15 +10,9 @@
 ![PASPP](https://github.com/tswizzle141/deepfish/blob/main/train/PASPP.png)
 ![Proposed Baseline](https://github.com/tswizzle141/deepfish/blob/main/train/fcn%20backbone.png)
 * In the loss function, we combine the LCFCN loss function and our Focal-Cross-Entropy loss function for weakly-supervised segmentation:
-\begin{equation}
-    L_{proposed\_loss} = L_{Focal-CE} + L_{LCFCN}
-\end{equation}
+$$L_{proposed\_loss} = L_{Focal-CE} + L_{LCFCN}$$
 with:
-\begin{equation}
-    L_{Focal-CE} = (1-L_{CE})^{\gamma}
-\end{equation}
+$$L_{Focal-CE} = (1-L_{CE})^{\gamma}$$
 $\gamma>0$ is parameter; $L_{CE}$ is the conventional Cross-Entropy:
-\begin{equation}
-    L_{CE} = -tln(p) - (1-t)ln(1-p)
-\end{equation}
+$$L_{CE} = -tln(p) - (1-t)ln(1-p)$$
 ## Results
