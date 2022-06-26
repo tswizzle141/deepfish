@@ -4,7 +4,7 @@
 * Weakly-supervised segmentation: With training images including fully-masked and point-level images (see the [DeepFish Dataset](https://alzayats.github.io/DeepFish/)).
 * Fishes localization and counting
 ## Our contributions
-* We keep the architecture from @IssamLaradji except for proposing new baseline and new loss function.
+* We keep the architecture from @IssamLaradji (with affinity and random walk module) except for proposing new baseline and new loss function.
 ![Proposed Architecture](https://github.com/tswizzle141/deepfish/blob/main/train/affinity-based%20architecture.png)
 * In the baseline, we have changed the FCN8-VGG16 to FCN8-wide-ResNet50. A Progressive Atrous Spatial Pyramid Pooling (PASPP) is added between the encoder and the decoder of the FCN8-base.
 ![PASPP](https://github.com/tswizzle141/deepfish/blob/main/train/PASPP.png)
@@ -18,3 +18,6 @@ $\gamma>0$ is parameter; $L_{CE}$ is the conventional Cross-Entropy:
 $$L_{CE} = -tln(p) - (1-t)ln(1-p)$$
 ## Results
 We have trained all cases end-to-end by ourselves, with optimizer Nesterov-Adam, initial learning rate of 1e-5.
+![table1](https://github.com/tswizzle141/deepfish/blob/main/train/1.jpg)
+![table2](https://github.com/tswizzle141/deepfish/blob/main/train/2.jpg)
+![table3](https://github.com/tswizzle141/deepfish/blob/main/train/3.jpg)
