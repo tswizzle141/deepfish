@@ -1,4 +1,5 @@
 # deepfish
+See our [published paper](https://ieeexplore.ieee.org/document/10013406) here.
 #### [Specially thanks to Mr.@IssamLaradji for the code] We have done this project for the Student Scientific Research Award held annually by Hanoi University of Science and Technology, and we have been honored with the Third Prize.
 ## Our tasks
 * Weakly-supervised segmentation: With training images including fully-masked and point-level images (see the [DeepFish Dataset](https://alzayats.github.io/DeepFish/)).
